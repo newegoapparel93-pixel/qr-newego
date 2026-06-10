@@ -162,7 +162,7 @@
         <div class="qr-wrap">
           <div id="qr-canvas-container"></div>
           <div class="qr-info">
-            <div class="url-box">https://shopee.co.id/newegoapparel?categoryId=100011&entryPoint=ShopByPDP&itemId=50209991139</div>
+            <div class="url-box">https://newegoapparel93-pixel.github.io/qr-newego/</div>
             <div class="btn-row">
               <button class="btn btn-primary" onclick="downloadQR()">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 2v8M5 7l3 3 3-3M2 12h12"/></svg>
@@ -200,6 +200,7 @@
 </div>
 
 <script>
+const TRACKER_URL = "https://newegoapparel93-pixel.github.io/qr-newego/";
 const SHOPEE_URL = "https://shopee.co.id/newegoapparel?categoryId=100011&entryPoint=ShopByPDP&itemId=50209991139";
 const BIN_ID = "6a28da96da38895dfea43ae7";
 const API_KEY = "$2a$10$.TLHT8poOTxcqThVwCE72.9X.He7y7TpnmMX40gDYJ0ez7W32qbWa";
@@ -336,7 +337,7 @@ function generateQR(){
   const container = document.getElementById('qr-canvas-container');
   container.innerHTML = '';
   try {
-    new QRCode(container, { text: SHOPEE_URL, width: 160, height: 160, colorDark: '#1a1a18', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M });
+    new QRCode(container, { text: TRACKER_URL, width: 160, height: 160, colorDark: '#1a1a18', colorLight: '#ffffff', correctLevel: QRCode.CorrectLevel.M });
   } catch(e) {}
 }
 
